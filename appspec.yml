@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /home/ec2-user/myapp
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: Scripts/start_server.sh
       timeout: 300
       runas: root
