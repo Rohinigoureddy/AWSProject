@@ -6,7 +6,7 @@ from config import *
 
 app = Flask(__name__)
 
-client = boto3.client('secretsmanager')
+client = boto3.client('secretsmanager',region_name='us-east-1')
 
 response = client.get_secret_value(
   SecretId='Testst1'
